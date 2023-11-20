@@ -1,13 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
+import NavBar from 'app/components/NavBar'
 export default function Home() {
   return (
     <main>
-      <h1>Hello Users</h1>
-      <h2>
-      <Link href='/youtube'>Youtube Posts</Link>
-      </h2>
+      <NavBar></NavBar>
+      <h1 className='main_header'>Yealt's Home</h1>      
     </main>
   )
 }
