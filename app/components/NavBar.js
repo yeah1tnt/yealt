@@ -6,6 +6,7 @@ function NavBar() {
         <div className ='nav'>
             <Link href='/'>Home</Link> <></>
             <Link href='/youtube'>Youtube</Link>
+            <Link href='/about'>About</Link>
         </div>
     )
 }
