@@ -5,11 +5,10 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 function youtubePage(){
-
+    const title = `Youtube`;
     return (
         <div>
-            <NavBar></NavBar>
-            <h1 className='main_header'>Youtube Post</h1>
+            <NavBar title={title}></NavBar>
             <div className='youtube'><p>[MusicBox] HOYO-MiX - Wildfire</p>
             <LiteYouTubeEmbed id="LgRl25hUteI" title="HOYO-MiX - Wildfire" />
             </div>

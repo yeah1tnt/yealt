@@ -1,18 +1,28 @@
 'use client'
-import react, {useState} from "react";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
+import {handleNavElementClick} from "../ui/navAnimation";
 
-function NavBar() {
-    const [click, setClick] = useState(false)
-    function onClick() {
-        setClick(!click)
-    }
+function NavBar({title}) {
+    const pathname = usePathname();
 
     return (
-        <div className ='nav'>
-            <div className ={`navElement ${click ? '':''}`} onClick={onClick}><Link href='/'>Home</Link></div>
-            <div className ='navElement'><Link href='/youtube'>Youtube</Link></div>
-            <div className ='navElement'><Link href='/about'>About</Link></div>
+        <div className='navMain'>
+            <div className='navTitle'>
+                <h1>{title}</h1>
+            </div>
+            
+            <div className ='navLink'>
+                <Link href='/'><div 
+                    className = {pathname === '/' ? 'navElementActive' : 'navElement'} 
+                    onClick={handleNavElementClick}>Home</div></Link>
+                <Link href='/youtube'><div 
+                    className = {pathname === '/youtube' ? 'navElementActive' : 'navElement'} 
+                    onClick={handleNavElementClick}>Youtube</div></Link>
+                <Link href='/about'><div 
+                    className = {pathname === '/about' ? 'navElementActive' : 'navElement'}
+                    onClick={handleNavElementClick}>About</div></Link>
+            </div>
         </div>
     )
 }
