@@ -3,13 +3,14 @@ import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {handleNavElementClick} from "../ui/navAnimation";
 
-function NavBar({title}) {
+function NavBar({title, description}) {
     const pathname = usePathname();
 
     return (
         <div className='navMain'>
             <div className='navTitle'>
                 <h1>{title}</h1>
+                <h3>{description}</h3>
             </div>
             
             <div className ='navLink'>

@@ -1,17 +1,16 @@
 'use client'
 import React from "react";
 import NavBar from '../components/NavBar'
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import YoutubePlayer from '../components/youtubePlayer'
 
 function youtubePage(){
     const title = `Youtube`;
+    const description = `Youtube Page`;
     return (
         <div>
-            <NavBar title={title}></NavBar>
-            <div className='youtube'><p>[MusicBox] HOYO-MiX - Wildfire</p>
-            <LiteYouTubeEmbed id="LgRl25hUteI" title="HOYO-MiX - Wildfire" />
-            </div>
+            <NavBar title={title} description={description}></NavBar>
+            <YoutubePlayer id="LgRl25hUteI" title="HOYO-MiX - Wildfire"/>
+
         </div>
     )
 }
