@@ -10,6 +10,7 @@ function youtubePage(){
         <div>
             <NavBar title={title} description={description}></NavBar>
             <YoutubePlayer id="LgRl25hUteI" title="HOYO-MiX - Wildfire"/>
+            <YoutubePlayer id="shZONLDcnTY" title="Departure"/>
 
         </div>
     )
